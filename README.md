@@ -1,9 +1,17 @@
 # Video Maker
-This is the course project for Introduction to Software Systems (ISS) course.  
+This is the course project for Introduction to Software Systems (ISS) course (CS6.201).
 
 This is a web tool for people to create videos out of images with background music. 
 
-User can upload the images and audios which will be saved in their profile. When creating the video, the user can reorder the uploaded images, set custom duration and transition for each image and set custom duration for the background audio.
+## Functionality
+
+1. User authentication using JWT Tokens
+2. Profile page with the user's saved images and audios
+2. Upload images and audios with Drag-and-Drop functionality
+3. Create video functionality with custom duration and animation for each image. Preloaded audio files for the background music with custom duration. 
+4. Option to choose the output video resolution and dimension.
+5. Search functionality in create video page for images and audios.
+6. Admin Profile page to view all users
 
 ## Run
 
@@ -22,6 +30,16 @@ Then run the python file with the command
     python3 app.py
 
 Website is now hosted locally at http://127.0.0.1:5000/. 
+
+## Screenshots
+
+![Profile Image Gallery](screenshots/ProfileImage.png)
+
+![Create Video Image Gallery](screenshots/CreateVideoImage.png)
+
+![Audio Gallery](screenshots/AudioImage.png)
+
+![Create Video](screenshots/CreateVideo.png)
 
 ## Contributors
 
