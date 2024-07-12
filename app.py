@@ -16,11 +16,15 @@ from mutagen import mp3, id3, wave
 import cv2 as cv2
 import numpy as np
 import time
+from moviepy.editor import *
+from moviepy.video.VideoClip import ColorClip
+import numpy as np
+import cv2
+from moviepy.video.fx import fadein, fadeout
 
 app = Flask(__name__)
-# app.config['SECRET_KEY']='18062b41611b47c0cfbf45a191a875d0'
-app.config['SECRET_KEY']=os.environ.get('SECRET_KE')
-
+app.config['SECRET_KEY']='18062b41611b47c0cfbf45a191a875d0'
+# app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
 
 def get_upload_connection():
     try:
@@ -79,11 +83,12 @@ def generate_token(user_id):
             'user_id': user_id,
             'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
         }
-        secret_key = os.environ.get('SECRET_KE')
-        if not secret_key:
-            raise ValueError("SECRET_KEY environment variable is not set.")
+        # secret_key = os.environ.get('SECRET_KEY')
+        # secret_key = 
+        # if not secret_key:
+        #     raise ValueError("SECRET_KEY environment variable is not set.")
         
-        token = jwt.encode(payload, secret_key, algorithm='HS256')
+        token = jwt.encode(payload, app.config['SECRET_KEY'], algorithm='HS256')
     except Exception as e:
         print("Error generating token:", e)
 
@@ -382,15 +387,6 @@ def create():
         return response
     else:
         return redirect("/login")
-    
-
-
-from flask import Flask, request, redirect, render_template
-from moviepy.editor import *
-from moviepy.video.VideoClip import ColorClip
-import numpy as np
-import cv2
-from moviepy.video.fx import fadein, fadeout
 
 DEFAULT_DURATION = 5
 DEFAULT_TRANSITION = 'None'
