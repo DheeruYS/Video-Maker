@@ -12,12 +12,16 @@ To run this tool on your local machine, first make sure you have the latest vers
 Then run the following command
 
     pip install -r requirements.txt 
+    
+Now, To connect to the online DB, run the following command
+
+    export DATABASE_URL="postgresql://beyond_infinity:PQz31GpRhRGyG5ZxPMq8kw@beyondinfinity-8907.8nk.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full"
 
 Then run the python file with the command
 
     python3 app.py
 
-Now go to http://127.0.0.1:5000/ to check out the tool.
+Website is now hosted locally at http://127.0.0.1:5000/. 
 
 ## Contributors
 
