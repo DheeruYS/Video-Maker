@@ -17,7 +17,11 @@ This is a web tool for people to create videos out of images with background mus
 
 To run this tool on your local machine, first make sure you have the latest version of python.
 
-Then run the following command
+Clone the repository 
+
+    git clone https://github.com/DheeruYS/Video-Maker.git
+
+Then run the following command to install the necessary packages
 
     pip install -r requirements.txt
 
