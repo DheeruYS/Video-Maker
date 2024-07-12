@@ -38,7 +38,7 @@ def get_upload_connection():
         # )
         
         connection = psycopg2.connect(
-            os.environ["DATABASE_URL"],
+            "postgresql://beyond_infinity:PQz31GpRhRGyG5ZxPMq8kw@beyondinfinity-8907.8nk.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full",
             sslmode='verify-full',
             sslrootcert='root.crt'
         )
